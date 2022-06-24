@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1> <%= kindOfDay %> </h1>
+    </div>
+    
+    <div class="box">
+        
+        
+                <!-- <li>buy food</li>
+                <li>cook food</li>
+                <li>eat food</li>
+                <li><%= listNewItem %></li>  -->
+
+                <% for(let i=0; i < listNewItem.length; i++) { %>
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <p><%= listNewItem[i] %></p>
+                    </div>
+                    <%}%>
+            
+        <form class="item" action="/" method="post">
+            <input type="text" name="listItem" placeholder="New Item" autocomplete="off" required>
+            <button type="submit" name="button"> + </button>
+        </form>
+    </div>
+
+    
+
+    
+    
+    
+</body>
+</html>
+
+<!-- <% if(kindOfDay === "Sabtu" || kindOfDay === "Minggu") { %>
+        <h1 style="color: blue">This is <%= kindOfDay %> </h1>
+        <% } else{ %>
+            <h1 style="color: palegreen">This is <%= kindOfDay %> </h1>
+        <% } %> -->
